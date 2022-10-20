@@ -1,1 +1,1 @@
-# wordpress-source
+# Wordpress Source Container Image
