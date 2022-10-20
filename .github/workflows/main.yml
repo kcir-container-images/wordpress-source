@@ -91,7 +91,9 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile.wp49
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            ${{ steps.meta.outputs.tags }}
+            wordpress-4.9.22
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
